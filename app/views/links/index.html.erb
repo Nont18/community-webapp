@@ -1,0 +1,16 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Welcome to AIT Community</h1>
+
+<%= link_to "Phone", phone_lists_path %>
+
+<div id="links">
+  <% @links.order(created_at: :desc).each do |link| %>
+    <%= render link %>
+    <p>
+      <%= link_to "Comment", link %>
+    </p>
+  <% end %>
+</div>
+
+<%= link_to "Notify or tell emergency", new_link_path %>

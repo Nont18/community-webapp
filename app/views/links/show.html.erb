@@ -1,0 +1,53 @@
+<h2>Comments</h2>
+<table>
+<thead>
+<tr>
+<th>Name </th>
+<th>Comment</th>
+<th>Post on</th>
+</tr>
+</thead>
+<tbody>
+<% @link.students.each do |student| %>
+<tr>
+<td><%= student.studentid %></td>
+<td><%= student.name %></td>
+<td><%= student.created_at %></td>
+
+<%= image_tag student.picture if student.picture.attached? %>
+</tr>
+<div>
+
+  <!-- Destroy button for admin -->
+  <!-- <%= button_to "Destroy this student", @student, method: :delete %> -->
+</div>
+<% end %>
+</tbody>
+</table>
+<br/>
+<h2>Add a comment:</h2>
+<%= form_for([@link, @link.students.build]) do |f| %>
+
+<div class="field">
+  <%= f.label :Name %><br />
+  <%= f.text_field :studentid, value: current_user.username, readonly: true %> 
+  <!-- readonly: true will make this field can not edit -->
+</div>
+
+<div class="field">
+  <%= f.label :Comment%><br />
+  <%= f.text_field :name %>
+</div>
+
+<div>
+    <%= f.file_field :picture %> 
+    <!-- <%= f.submit %> -->
+</div>
+
+<div class="actions">
+  <%= f.submit %>
+</div>
+
+<% end %>
+<br />
+<%= link_to "Back", links_path %>

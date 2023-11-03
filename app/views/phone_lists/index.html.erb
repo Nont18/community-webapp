@@ -1,0 +1,26 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Phone lists</h1>
+
+<%= form_tag phone_lists_path, method: :get, remote: true, id: "search-form" do %>
+  <div class="field">
+    <%= text_field_tag :search, params[:search], placeholder: "Search phone lists..." %>
+  </div>
+  <div class="actions">
+    <%= submit_tag "Search", name: nil, class: "btn btn-primary" %>
+  </div>
+<% end %>
+
+
+<div id="phone_lists">
+  <% @phone_lists.each do |phone_list| %>
+    <%= render phone_list %>
+    <p>
+      <%= link_to "Show this phone list", phone_list %>
+    </p>
+  <% end %>
+</div>
+
+<%= link_to "New phone list", new_phone_list_path %>
+</br>
+<%= link_to "Back", links_path %>

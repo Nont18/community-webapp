@@ -1,0 +1,2 @@
+class PhoneList < ApplicationRecord
+end
