@@ -4,6 +4,9 @@
     <%= link.name %>
   </p>
 
+  <strong>Post on :</strong>
+  <td><%= link.created_at+25200 %></td>
+    
   <p>
     <strong>Description:</strong>
     <%= link.url %>
@@ -16,7 +19,17 @@
 
   <p>
     <strong>Type of Emergency :</strong>
-    <%= link.type_emergency %>
+    <% if link.type_emergency == "Harassment" %>
+      <span style="color: orange;"><%= link.type_emergency %></span>
+    <% elsif link.type_emergency == "Fire" %>
+      <span style="color: red;"><%= link.type_emergency %></span>
+    <% elsif link.type_emergency == "Accident" %>
+      <span style="color: purple;"><%= link.type_emergency %></span>
+    <% elsif link.type_emergency == "Medical" %>
+      <span style="color: green;"><%= link.type_emergency %></span>
+    <% else %>
+      <%= link.type_emergency %>
+    <% end %>
   </p>
 
 </div>

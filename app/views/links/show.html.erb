@@ -1,5 +1,6 @@
 <h2>Comments</h2>
 <table>
+<table>
 <thead>
 <tr>
 <th>Name </th>
@@ -12,8 +13,7 @@
 <tr>
 <td><%= student.studentid %></td>
 <td><%= student.name %></td>
-<td><%= student.created_at %></td>
-
+<td><%= student.created_at+25200 %></td>
 
 </tr>
 <div>
@@ -22,6 +22,7 @@
   <!-- <%= button_to "Destroy this student", @student, method: :delete %> -->
 </div>
 <% end %>
+
 </tbody>
 </table>
 <br/>
@@ -36,13 +37,13 @@
 
 <div class="field">
   <%= f.label :Comment%><br />
-  <%= f.text_field :name %>
+  <%= f.text_area  :name %>
 </div>
 
-<div>
+<!-- <div>
     <%= f.file_field :picture %> 
-    <!-- <%= f.submit %> -->
-</div>
+    <%= f.submit %>
+</div> -->
 
 <div class="actions">
   <%= f.submit %>
@@ -51,3 +52,4 @@
 <% end %>
 <br />
 <%= link_to "Back", links_path %>
+

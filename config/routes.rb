@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   resources :phone_lists
+  get 'map' ,to:'map#show'
   
   devise_for :users
   resources :links do

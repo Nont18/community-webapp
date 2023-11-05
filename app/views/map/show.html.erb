@@ -1,0 +1,21 @@
+<h1>MAP</h1>
+<a class="button" href="<%= links_path %>">Back to Homepage</a>
+
+<div id="map" style="height: 400px; width: 100%;"></div>
+<script>
+  function initMap() {
+    var map = new google.maps.Map(document.getElementById('map'), {
+      center: { lat: 37.7749, lng: -122.4194 }, // Initial map center (San Francisco)
+      zoom: 13 // Zoom level
+    });
+  }
+</script>
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=<%= Rails.application.secrets.google_maps_api_key %>&callback=initMap"></script>
+
+</br>
+
+<img src="<%= asset_path('IMG_1191.jpg') %>" alt="Custom Map" width="785" height="500" />
+
+</br>
+
+<img src="<%= asset_path('IMG_1190.jpg') %>" alt="Custom Map" width="785" height="500" />
