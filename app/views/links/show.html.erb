@@ -23,6 +23,18 @@
 </div>
 <% end %>
 
+<!-- <% @link.students.each do |student| %>
+  <%= button_to "edit this student", @link, method: :edit %>
+<% end %> -->
+
+<!-- <%= link_to "Edit this book", edit_link_path(@link) %> -->
+
+<% if @link.user == current_user.username %>
+  <%= button_to "Destroy this post", @link, method: :delete %>
+<% end %>
+
+
+
 </tbody>
 </table>
 <br/>

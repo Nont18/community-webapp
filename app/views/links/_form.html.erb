@@ -29,10 +29,15 @@
 
   <div>
     <%= form.label :type_emergency, style: "display: block" %>
-    <%= form.select :type_emergency, ['Harassment', 'Fire', 'Accident', 'Medical'] %>
+    <%= form.select :type_emergency, ['Harassment', 'Fire', 'Accident', 'Medical', 'Notify'] %>
     <!-- Replace the array with your actual options -->
   </div>
 
+  <div class="field">
+    <%= form.label :user %><br />
+    <%= form.text_field :user, value: current_user.username, readonly: true %> 
+    <!-- readonly: true will make this field can not edit -->
+  </div>
   
 
   <div>

@@ -18,6 +18,11 @@ class LinksController < ApplicationController
 
   # GET /links/1/edit
   def edit
+    @link = Link.find(params[:id])
+    if @link.user != current_user
+      flash[:alert] = "You don't have permission to edit this link."
+      redirect_to @link
+    end
   end
 
   # POST /links or /links.json
@@ -69,6 +74,6 @@ class LinksController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def link_params
-      params.require(:link).permit(:name, :url, :picture, :ruch_emergency, :type_emergency)
+      params.require(:link).permit(:name, :url, :picture, :ruch_emergency, :type_emergency, :user)
     end
 end

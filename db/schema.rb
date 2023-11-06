@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_11_05_131523) do
+ActiveRecord::Schema[7.0].define(version: 2023_11_06_135801) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -51,6 +51,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_11_05_131523) do
     t.string "ruch_emergency"
     t.bigint "user_id"
     t.string "type_emergency"
+    t.string "user"
     t.index ["user_id"], name: "index_links_on_user_id"
   end
 

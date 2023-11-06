@@ -6,4 +6,8 @@ class Link < ApplicationRecord
     # has_many :active_storage_attachments
     has_one_attached :picture
 
+    def owned_by?(user)
+        user == self.user
+    end
+
 end

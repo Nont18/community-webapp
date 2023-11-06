@@ -9,21 +9,13 @@
 
 </div>
 <div id="content">
-  <a class="button" href="<%= phone_lists_path %>">Phone</a>
+  <a class="button" href="<%= phone_lists_path %>">Phone Lists</a>
   <a class="button" href="<%= new_link_path %>">Notify or tell emergency</a>
   <a class="button" href="<%= map_path %>">See the Map</a>
+  <a class="button" href="https://www.ait.ac.th">AIT site</a>
+  <a class="button" href="">Developing..</a>
 </div>
 
-<div id="map" style="height: 400px; width: 100%;"></div>
-<script>
-  function initMap() {
-    var map = new google.maps.Map(document.getElementById('map'), {
-      center: { lat: 37.7749, lng: -122.4194 }, // Initial map center (San Francisco)
-      zoom: 13 // Zoom level
-    });
-  }
-</script>
-<script async defer src="https://maps.googleapis.com/maps/api/js?key=<%= Rails.application.secrets.google_maps_api_key %>&callback=initMap"></script>
 
 
 <div id="content">
