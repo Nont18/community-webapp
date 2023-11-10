@@ -1,0 +1,35 @@
+<h1>List of Users</h1>
+
+<%= form_tag(users_path, method: :get) do %>
+  <p>
+    <%= text_field_tag :search, params[:search], placeholder: "Search by username" %>
+    <%= submit_tag "Search" %>
+  </p>
+<% end %>
+
+<strong> Total Users: <%= User.count %></strong>
+
+<table>
+  <thead>
+    <tr>
+      <th>Username</th>
+      <th>Email</th>
+      <!-- <th>Actions</th> -->
+    </tr>
+  </thead>
+  <tbody>
+    <% @users.each do |user| %>
+      <tr>
+        <td><%= user.username %></td>
+        <td><%= user.email %></td>
+        <!-- <td>
+          <%= form_for(user, method: :destroy, data: { confirm: "Are you sure?" }) do |f| %>
+            <%= f.submit "Destroy" %>
+          <% end %>
+        </td> -->
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+

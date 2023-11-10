@@ -1,0 +1,30 @@
+<h1>Admin Zone</h1>
+
+<table>
+  <tr>
+    <th>Username</th>
+    <th>Post</th>
+    <th>View</th>
+    <th>Destroy Post</th>
+  </tr>
+
+  <% @link.each do |link| %>
+    <tr>
+      <td><%= link.user %></td>
+      <td><%= link.name %></td>
+      <td><%= button_to link_to "See", link %></td>
+      <td>
+        <%= button_to 'Destroy Post', link, method: :delete, data: { confirm: 'Are you sure?' } %>
+      </td>
+    </tr>
+  <% end %>
+</table>
+
+<a class="button" href="<%= links_path %>">Back to Homepage</a>
+<a class="button" href="<%= users_path %>">list of user</a>
+
+<% @link.each do |link| %>
+    <%=link.id %> 
+<% end %>
+
+
