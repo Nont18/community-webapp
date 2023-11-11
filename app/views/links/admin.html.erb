@@ -16,15 +16,21 @@
       <td>
         <%= button_to 'Destroy Post', link, method: :delete, data: { confirm: 'Are you sure?' } %>
       </td>
+
     </tr>
   <% end %>
+  
 </table>
+
 
 <a class="button" href="<%= links_path %>">Back to Homepage</a>
 <a class="button" href="<%= users_path %>">list of user</a>
+<a class="button" href="<%= new_phone_list_path %>">Create Phone Number </a>
 
-<% @link.each do |link| %>
+
+
+<!-- <% @link.each do |link| %>
     <%=link.id %> 
-<% end %>
+<% end %> -->
 
 

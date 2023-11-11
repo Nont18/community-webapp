@@ -1,6 +1,7 @@
 class User < ApplicationRecord
   validates :email, presence: true
   validate :email_contains_ait_asia_domain
+  validates :username, presence: true, uniqueness: true
   has_many :links
 
   def email_contains_ait_asia_domain

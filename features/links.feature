@@ -2,10 +2,13 @@ Feature: Links
 
     Scenario: Get course info
 
-    Anyone should be able to see the list of students working on link
+    User who has account should be able to see the list of comment working on post
 
-    Given There is a links page
-    When I visit the main link page
-    Then I should see the list of students
-    When I click comment
-    Then The page should show some of comment
+    Given I am user
+    Given There is a post
+    And post have some comments
+    And I am logged in to access website
+    When I visit the landing page
+    Then I should see the list of emergency
+    When I click comment to see the comment
+    Then The page should show some of comment on that post

@@ -25,4 +25,13 @@ def destroy
   end
 end
 
+
+def edit
+  @student = Link.find(params[:id])
+    if @link.user != current_user
+      flash[:alert] = "You don't have permission to edit this link."
+      redirect_to @link
+    end
+end
+
 end

@@ -15,12 +15,12 @@
 <td><%= student.name %></td>
 <td><%= student.created_at+25200 %></td>
 
-</tr>
-<div>
 
-  <!-- Destroy button for admin -->
-  <!-- <%= button_to "Destroy this student", @student, method: :delete %> -->
-</div>
+</tr>
+<% end %>
+
+<% if current_user.username == @link.user %>
+  <%= link_to "Edit this book", edit_link_path(@link) %> 
 <% end %>
 
 <!-- <% @link.students.each do |student| %>

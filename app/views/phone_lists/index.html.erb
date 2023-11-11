@@ -1,4 +1,4 @@
-<!-- <p style="color: green"><%= notice %></p>
+<p style="color: green"><%= notice %></p>
 
 <h1>Phone lists</h1>
 
@@ -14,20 +14,26 @@
 
 <div id="phone_lists">
   <% @phone_lists.each do |phone_list| %>
-    <%= render phone_list %>
+    <table>
+    <table>
+    <td><%= render phone_list %></td>
+    <% if current_user.username == 'admin' %>
     <p>
-      <%= link_to "Show this phone list", phone_list %>
+      <td><%= link_to "Show this phone list", phone_list %></td>
     </p>
+    <% end %>
   <% end %>
+  </table>
+</table>
 </div>
 
-<%= link_to "New phone list", new_phone_list_path %>
+
 </br>
-<%= link_to "Back", links_path %>  -->
+<%= link_to "Back", links_path %> 
 
 
 
-<h2>Phone Call</h2>
+<!-- <h2>Phone Call</h2>
 
 <h2>Who do you want to contact?</h2>
 
@@ -55,4 +61,4 @@
 
 
 
-<%= link_to "Back", links_path %>
+<%= link_to "Back", links_path %> -->

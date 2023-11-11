@@ -1,3 +1,5 @@
+require 'factory_bot'
+
 FactoryBot.define do
     #This will create a link class
     factory :link do
@@ -11,4 +13,10 @@ FactoryBot.define do
         name {'Help me to fix the light'}
         studentid {'Hello'}
     end
+
+    factory :user do
+        email {'st124335@ait.asia'}
+        password {'123456'}
+    end
+
 end
