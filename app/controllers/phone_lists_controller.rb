@@ -35,6 +35,7 @@ class PhoneListsController < ApplicationController
   # POST /phone_lists or /phone_lists.json
   def create
     @phone_list = PhoneList.new(phone_list_params)
+    @phone_list.link_id = some_logic_to_set_link_id
 
     respond_to do |format|
       if @phone_list.save
