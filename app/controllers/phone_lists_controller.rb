@@ -78,6 +78,6 @@ class PhoneListsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def phone_list_params
-      params.require(:phone_list).permit(:name, :phone_number)
+      params.require(:phone_list).permit(:name, :phone_number, :link_id)
     end
 end
