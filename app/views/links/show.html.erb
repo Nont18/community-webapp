@@ -20,7 +20,7 @@
 <% end %>
 
 <% if current_user.username == @link.user %>
-  <%= link_to "Edit this book", edit_link_path(@link) %> 
+  <%= link_to "Edit this post", edit_link_path(@link) %> 
 <% end %>
 
 <!-- <% @link.students.each do |student| %>
@@ -64,4 +64,8 @@
 <% end %>
 <br />
 <%= link_to "Back", links_path %>
+
+
+
+
 

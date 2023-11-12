@@ -15,8 +15,17 @@ FactoryBot.define do
     end
 
     factory :user do
+        id {1}
         email {'st124335@ait.asia'}
+        username {'Nont'}
         password {'123456'}
+    end
+
+    factory :admin_user do
+        id {2}
+        email { 'admin@ait.asia' }
+        username { 'admin' }
+        password { '123456' }
     end
 
 end

@@ -43,3 +43,8 @@ Then('The page should show some of comment on that post') do
   end
   #pending # Write code here that turns the phrase above into concrete actions
 end
+
+
+
+
+

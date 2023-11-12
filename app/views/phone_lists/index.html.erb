@@ -15,16 +15,14 @@
 <div id="phone_lists">
   <% @phone_lists.each do |phone_list| %>
     <table>
-    <table>
-    <td><%= render phone_list %></td>
-    <% if current_user.username == 'admin' %>
-    <p>
-      <td><%= link_to "Show this phone list", phone_list %></td>
-    </p>
-    <% end %>
+      <tr>
+        <td><%= render phone_list %></td>
+        <% if user_signed_in? && current_user.username == 'admin' %>
+          <td><%= link_to "Show this phone list", phone_list %></td>
+        <% end %>
+      </tr>
+    </table>
   <% end %>
-  </table>
-</table>
 </div>
 
 

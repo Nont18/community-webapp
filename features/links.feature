@@ -12,3 +12,12 @@ Feature: Links
     Then I should see the list of emergency
     When I click comment to see the comment
     Then The page should show some of comment on that post
+
+    Given I am AIT admin
+    And I am logged in as admin with email and password
+    When I visit the landing page
+    Then I should see the button which only for admin
+    And I click only admin button
+    Then tha page directly through Admin Zone page
+    And I should see the list of post and user management
+    

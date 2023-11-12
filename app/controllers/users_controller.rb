@@ -19,6 +19,14 @@ class UsersController < ApplicationController
     end
 
     def show
+      @user = User.find(params[:id])
+      @user.destroy
+      # redirect_to user_path, notice: "User was successfully destroyed."
+      respond_to do |format|
+        format.html { redirect_to admin_url, notice: "User was successfully destroyed." }
+        format.json { head :no_content }
+      end
     end
+    
 end
   
