@@ -1,0 +1,30 @@
+image: ruby:3.2.2
+
+services:
+  - postgres:14.9
+
+variables:
+  POSTGRES_DB: project_tracker_test
+  POSTGRES_USER: project_tracker
+  POSTGRES_PASSWORD: project_tracker
+cache:
+  paths:
+    - vendor/ruby
+before_script:
+  - bundle install
+
+test:
+  stage: test
+  variables:
+    CI: 1
+    RAILS_ENV: test
+    SECRET_KEY_BASE: RVJ2hPMTB6FcLGQyNiRNvn
+    PROJECT_TRACKER_DATABASE_HOST: postgres
+    PROJECT_TRACKER_DATABASE_USERNAME: project_tracker
+    PROJECT_TRACKER_DATABASE_PASSWORD: project_tracker
+  script:
+    - rails db:migrate
+    - rails db:seed
+    - bundle exec cucumber
+  coverage: /\(\d+.\d+\%\) covered/
+
