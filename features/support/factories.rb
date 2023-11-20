@@ -17,11 +17,11 @@ FactoryBot.define do
     factory :user do
         id {1}
         email {'st124335@ait.asia'}
-        username {'Nont'}
+        username {'admin'}
         password {'123456'}
     end
 
-    factory :admin_user do
+    factory :admin do
         id {2}
         email { 'admin@ait.asia' }
         username { 'admin' }
