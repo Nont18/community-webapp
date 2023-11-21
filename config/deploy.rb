@@ -2,7 +2,7 @@
 lock "~> 3.18.0"
 
 set :application, "project_tracker" #"my_app_name"
-set :repo_url, "git@gitlab.com:ait_fsad-2023/team-6/emergency-webapp.git" #"git@example.com:me/my_repo.git"
+set :repo_url, ""#"git@gitlab.com:ait_fsad-2023/team-6/emergency-webapp.git" #"git@example.com:me/my_repo.git"
 
 # Default branch is :master
 # ask :branch, `git rev-parse --abbrev-ref HEAD`.chomp
