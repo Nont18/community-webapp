@@ -1,7 +1,6 @@
 class LinksController < ApplicationController
   before_action :set_link, only: %i[ show edit update destroy ]
   before_action :authenticate_user!, except: [:index]
-  # http_basic_authenticate_with name: "admin", password: "admin", except: :index
   before_action :check_admin_role, only: [:admin]
 
   # GET /links or /links.json

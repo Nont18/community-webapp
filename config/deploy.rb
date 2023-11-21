@@ -2,13 +2,14 @@
 lock "~> 3.18.0"
 
 set :application, "project_tracker" #"my_app_name"
-set :repo_url, ""#"git@gitlab.com:ait_fsad-2023/team-6/emergency-webapp.git" #"git@example.com:me/my_repo.git"
+set :repo_url, "git@gitlab.com:ait_fsad-2023/team-6/emergency-webapp.git" #"git@example.com:me/my_repo.git"
 
 # Default branch is :master
 # ask :branch, `git rev-parse --abbrev-ref HEAD`.chomp
 
 # Default deploy_to directory is /var/www/my_app_name
-set :deploy_to, "home/ubuntu/#{fetch :application}" #"/var/www/my_app_name"
+# set :deploy_to, "home/ubuntu/#{fetch :application}" #"/var/www/my_app_name"
+set :deploy_to, "home/ubuntu/emergency-webapp"
 
 # Default value for :format is :airbrussh.
 # set :format, :airbrussh
@@ -38,3 +39,8 @@ set :keep_releases, 5
 
 # Uncomment the following to require manually verifying the host key before first deploy.
 # set :ssh_options, verify_host_key: :secure
+set :ssh_options, {
+  keys: ["/home/nont18/Downloads/Myserver.pem"],
+  forward_agent: false,
+  auth_methods: ["publickey"]
+}
