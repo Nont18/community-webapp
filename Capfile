@@ -5,6 +5,14 @@ require "capistrano/setup"
 require "capistrano/deploy"
 
 # Load the SCM plugin appropriate to your project:
+
+require 'capistrano/rails'
+require 'capistrano/passenger'
+require 'capistrano/rbenv'
+
+set :rbenv_type, :user
+set :rbenv_ruby, '3.2.2'
+
 #
 # require "capistrano/scm/hg"
 # install_plugin Capistrano::SCM::Hg
@@ -38,9 +46,4 @@ install_plugin Capistrano::SCM::Git
 Dir.glob("lib/capistrano/tasks/*.rake").each { |r| import r }
 
 
-require 'capistrano/rails'
-require 'capistrano/passenger'
-require 'capistrano/rbenv'
 
-set :rbenv_type, :user
-set :rbenv_ruby, '3.2.2'
