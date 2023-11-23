@@ -1,8 +1,8 @@
 image: ruby:3.2.2
 
-stages:
-  - test
-  - deploy
+# stages:
+#   - test
+#   - deploy
 
 services:
   - postgres:14.9
@@ -32,15 +32,14 @@ test:
     - bundle exec cucumber
   coverage: /\(\d+.\d+\%\) covered/
 
-deploy:
-  stage: deploy
-  script:
-    - eval `ssh-agent -s`
-    - chmod 400 $Rails_prod_demo
-    - chmod --help
-    - ssh-add $Rails_prod_demo
-    - gem install capistrano
-    - cap production deploy BRANCH=main
-  only:
-  - main
+# deploy:
+#   stage: deploy
+#   script:
+#     - eval `ssh-agent -s`
+#     - chmod 400 $Rails_prod_demo
+#     - ssh-add $Rails_prod_demo
+#     - gem install capistrano
+#     - cap production deploy BRANCH=main
+#   only:
+#   - main
 
