@@ -37,6 +37,7 @@ deploy:
   script:
     - eval `ssh-agent -s`
     - chmod 400 $Rails_prod_demo
+    - chmod --help
     - ssh-add $Rails_prod_demo
     - gem install capistrano
     - cap production deploy BRANCH=main
