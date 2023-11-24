@@ -7,13 +7,14 @@ This is done by Team 6
 Feature : 
 
     User :     
-        - access the phone call list 
-        - post to the community
+        - access the phone call lists 
+        - post, edit, delete to the community
         - comment to the post
 
     Admin :
         - Can delete some post
         - Can delete user from System
+        - Can create give some data to system
 
 
 Things you may want to cover:
