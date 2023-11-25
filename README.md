@@ -1,8 +1,8 @@
 # README
 
-### Emergency Web-Application
+### Emergency Web-Application : Based on community web-application
 
-This is done by Team 6
+Done by Team 6
 
 Feature : 
 
@@ -10,14 +10,16 @@ Feature :
         - access the phone call lists 
         - post, edit, delete to the community
         - comment to the post
+        - access to see the dorm map
 
     Admin :
-        - Can delete some post
-        - Can delete user from System
-        - Can create give some data to system
+        - Can delete any posts
+        - Can delete user from the system
+        - have user management page
+        - Add some data to community
 
 
-Things you may want to cover:  
+Things you may want to cover :  
 
 * Ruby version 3.2.2   
 
@@ -37,5 +39,5 @@ Things you may want to cover:
        
     We have deploy into 2 parts       
         - EC2 instance    
-        - using Capistrano    
+        - using Capistrano which can automate deploy    
 * ...
