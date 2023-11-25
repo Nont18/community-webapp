@@ -2,9 +2,9 @@
 
 ### Emergency Web-Application : Based on community web-application
 
-### Report,Slide will cover in repository
+Report,Slide will cover in repository
 
-### Demo : https://youtu.be/74HWvnYVzK8
+Demo : https://youtu.be/74HWvnYVzK8
 
 Done by Team 6
 
@@ -32,9 +32,9 @@ Things you may want to cover :
 * How to access our web-application : 
     - http://34.231.175.148:3000/
 
-* Deployment instructions : 
+* Deployment instructions
        
-    We have deploy into 2 parts       
+    We have deploy into 2 parts  :      
         - EC2 instance    
         - using Capistrano which can automate deploy    
 * ...
