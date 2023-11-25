@@ -17,11 +17,11 @@ Feature :
         - Can create give some data to system
 
 
-Things you may want to cover:
+Things you may want to cover:  
 
-* Ruby version 3.2.2
+* Ruby version 3.2.2   
 
-* System dependencies
+* System dependencies      
 
 * Configuration
 
@@ -34,7 +34,8 @@ Things you may want to cover:
 * Services (job queues, cache servers, search engines, etc.)
 
 * Deployment instructions
-    We have deploy into 2 parts    
-        - EC2 instance
-        - using Capistrano
+       
+    We have deploy into 2 parts       
+        - EC2 instance    
+        - using Capistrano    
 * ...
