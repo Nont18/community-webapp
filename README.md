@@ -31,6 +31,7 @@ Things you may want to cover :
 
 * How to access our web-application : 
     - http://34.231.175.148:3000/
+    - Server will not strat, If we don’t trigger the server
 
 * Deployment instructions
        
