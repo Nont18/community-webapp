@@ -8,6 +8,12 @@ Demo : https://youtu.be/74HWvnYVzK8
 
 Done by Team 6
 
+* How to access our web-application : 
+    - http://34.231.175.148:3000/
+    - Server will not strat, If we don’t trigger the server
+
+
+
 Feature : 
 
     User :     
@@ -28,10 +34,6 @@ Feature :
 Things you may want to cover :  
 
 * Ruby version 3.2.2   
-
-* How to access our web-application : 
-    - http://34.231.175.148:3000/
-    - Server will not strat, If we don’t trigger the server
 
 * Deployment instructions
        
