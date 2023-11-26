@@ -33,11 +33,15 @@ Feature :
 
 Things you may want to cover :  
 
-* Ruby version 3.2.2   
+* Ruby version 3.2.2 
+
+* Rails version 7.0.8
+
+* PostgreSQL
 
 * Deployment instructions
        
     We have deploy into 2 parts  :      
         - EC2 instance    
         - using Capistrano which can automate deploy    
-* ...
+
